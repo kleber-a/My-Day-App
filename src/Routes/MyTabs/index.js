@@ -16,10 +16,10 @@ function MyTabs() {
       }} name="Principal" component={Principal}/>
       <Tab.Screen options={{
         tabBarIcon: () => <Icon name="pluscircle" color={"blue"} size={48} /> ,
-        }} name="Tela2" component={Tela2} />
+        }} name="Tela1" component={Tela1} />
       <Tab.Screen options={{
         tabBarIcon: () => <Icone name="menu" color={"#304FFE"} size={30} /> ,
-        }} name="Tela1" component={Tela1} />
+        }} name="Tela2" component={Tela2} />
     </Tab.Navigator>
   );
 }
