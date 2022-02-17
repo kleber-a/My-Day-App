@@ -5,7 +5,7 @@ import Auxilio from '../../Telas/Auxilio';
 import Tela1 from '../../Telas/Tela1';
 import Tela2 from '../../Telas/Tela2';
 import Tela3 from '../../Telas/Tela3';
-
+import Container from '../../Telas/Tela1/componentes/Container'
 
 
 
@@ -32,7 +32,7 @@ function MyStack() {
           headerShown: false,
         }}
         name="Tela1" component={Tela1} />
-      
+
       <Stack.Screen
         options={{
           headerShown: false,
@@ -44,7 +44,14 @@ function MyStack() {
           headerShown: true,
         }}
         name="Tela3" component={Tela3} />
+
+      <Stack.Screen
+        options={{
+          headerShown: true,
+        }}
+        name="Container" component={Container} />
     </Stack.Navigator>
+
   );
 }
 

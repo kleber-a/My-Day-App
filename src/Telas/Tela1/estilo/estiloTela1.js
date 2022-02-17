@@ -24,20 +24,22 @@ const estiloTela1 = StyleSheet.create({
 
     //Caixa1
     caixa1: {
-        backgroundColor: "#FFFF",
+        backgroundColor: "#FFFFFF",
         width: "100%",
         height: "50%",
         borderRadius: 20,
+        flexDirection: "row"
+        
     
     },
 
-    texto1: {
-        color: "#ACACAC",
-        fontSize: 16,
-        textAlign: "center",
-        lineHeight: 24,
-        fontWeight: "400",
-        bottom: 35,
+    caixa1image: {
+        backgroundColor: "#FFFFFF",
+        width: "50%",
+        height: "100%",
+        flexDirection: "row",
+        borderRadius: 20
+        
     },
 
     img: {
@@ -45,19 +47,38 @@ const estiloTela1 = StyleSheet.create({
         height: 57,
         resizeMode: "cover",
         backgroundColor: "white",
-        top: 15,
-        left: 15
+        margin: 10
     },
 
     textoEmoji: {
-        width: 70,
+
+        width: 100,
         height: 37,
-        left: 84,
-        bottom: 35,
         fontWeight: "700",
         fontSize: 24,
-        color: "#E24B4B"
+        color: "#E24B4B",
+        marginTop: 37        
+        
     },
+    
+    caixa1TextoCima: {
+        width: "50%",
+        backgroundColor: "#FFFFFF",
+        borderRadius: 20
+    },
+    
+
+    texto1: {
+        color: "#ACACAC",
+        fontSize: 16,
+        textAlign: "center",
+        lineHeight: 24,
+        fontWeight: "400",
+        right: 88,
+        marginTop: 10
+    },
+
+    
 
     textoH: {
         width: 40,
@@ -66,8 +87,11 @@ const estiloTela1 = StyleSheet.create({
         fontSize: 14,
         lineHeight: 21,
         textAlign: "center",
-        left: 138,
-        bottom: 63
+        bottom: 28,
+        marginTop: 40
+
+        
+      
     },
     //Fim caixa1
 
