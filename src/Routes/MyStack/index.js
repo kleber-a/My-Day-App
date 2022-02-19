@@ -16,39 +16,20 @@ function MyStack() {
 
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen
-        options={{
-          headerShown: false,
-        }} name="Login" component={TelaLogin} />
+        options={{headerShown: false}} 
+        name="Login" component={TelaLogin} />
 
       <Stack.Screen
-        options={{
-          headerShown: false,
-        }}
+        options={{headerShown: false}}
         name="auxilio" component={Auxilio} />
 
-
       <Stack.Screen
-        options={{
-          headerShown: false,
-        }}
-        name="Tela1" component={Tela1} />
-
-      <Stack.Screen
-        options={{
-          headerShown: false,
-        }}
-        name="Tela2" component={Tela2} />
-
-      <Stack.Screen
-        options={{
-          headerShown: true,
-        }}
+        options={{headerShown: true,
+        headerTransparent: true}}
         name="Tela3" component={Tela3} />
 
       <Stack.Screen
-        options={{
-          headerShown: true,
-        }}
+        options={{headerShown: true}}
         name="Container" component={Container} />
     </Stack.Navigator>
 

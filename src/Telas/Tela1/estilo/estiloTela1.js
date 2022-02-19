@@ -8,7 +8,8 @@ const estiloTela1 = StyleSheet.create({
         width: "100%",
         height: "100%",
         resizeMode: "cover",
-        backgroundColor: "#E5E5E5"
+        backgroundColor: "#E5E5E5",
+        
     },
 
     //Container
@@ -19,6 +20,7 @@ const estiloTela1 = StyleSheet.create({
         left: 19,
         marginTop: 20,
         borderRadius: 20,
+        
 
     },
 
@@ -29,44 +31,38 @@ const estiloTela1 = StyleSheet.create({
         height: "50%",
         borderRadius: 20,
         flexDirection: "row"
-        
-    
+
+
     },
 
     caixa1image: {
-        backgroundColor: "#FFFFFF",
-        width: "50%",
+        backgroundColor: "#FFFF",
+        width: "25%",
         height: "100%",
         flexDirection: "row",
         borderRadius: 20
-        
+
     },
 
     img: {
         width: 57,
         height: 57,
         resizeMode: "cover",
-        backgroundColor: "white",
-        margin: 10
+        backgroundColor: "#FFFF",
+        marginLeft: 24,
+        marginTop: 15
     },
 
-    textoEmoji: {
 
-        width: 100,
-        height: 37,
-        fontWeight: "700",
-        fontSize: 24,
-        color: "#E24B4B",
-        marginTop: 37        
-        
-    },
-    
+
     caixa1TextoCima: {
-        width: "50%",
-        backgroundColor: "#FFFFFF",
-        borderRadius: 20
+        width: "75%",
+        height: "100%",
+        backgroundColor: "#FFFF",
+        borderRadius: 20,
+
     },
-    
+
 
     texto1: {
         color: "#ACACAC",
@@ -74,24 +70,47 @@ const estiloTela1 = StyleSheet.create({
         textAlign: "center",
         lineHeight: 24,
         fontWeight: "400",
-        right: 88,
-        marginTop: 10
+        top: 15,
+        right: 26
+
+
     },
 
-    
+    humor: {
+        backgroundColor: "#FFFF",
+        width: "80%",
+        fontWeight: "700",
+        fontSize: 22,
+        marginTop: 22,
+        marginLeft: 15,
+    },
+
+    textoEmoji: {
+
+        backgroundColor: "#FFFF",
+        width: "80%",
+        fontWeight: "700",
+        fontSize: 22,
+        color: "#E24B4B",
+        marginTop: 22,
+        marginLeft: 15,
+
+
+
+    },
+
 
     textoH: {
-        width: 40,
-        height: 21,
+        width: "100%",
+        height: "100%",
         color: "#ACACAC",
         fontSize: 14,
         lineHeight: 21,
         textAlign: "center",
-        bottom: 28,
-        marginTop: 40
+        fontWeight: "normal",
+        backgroundColor: "#FFFF",
 
-        
-      
+
     },
     //Fim caixa1
 
@@ -113,10 +132,10 @@ const estiloTela1 = StyleSheet.create({
     },
     txt1caixa2: {
         fontWeight: "600",
-        width: 40,
+        width: 50,
         height: 19.14,
         color: "black",
-        marginLeft: 5
+        marginLeft: 1
 
     },
     ponto: {
@@ -164,8 +183,11 @@ const estiloTela1 = StyleSheet.create({
         marginHorizontal: 20,
         marginVertical: 10,
         width: "90%",
-        height: "100%"
-    }
+        height: 20
+    },
+
+
+
 
 
 })

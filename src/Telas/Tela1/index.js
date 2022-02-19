@@ -2,21 +2,89 @@ import React from 'react'
 import { View, FlatList, Text, Image, TouchableOpacity } from 'react-native';
 import estiloTela1 from './estilo/estiloTela1';
 import Container from './componentes/Container';
-import Caixas from './componentes/Caixas'
+import Caixas from '../Tela1/componentes/Caixas'
 
 
-export default function Tela1({ navigation }) {
+
+
+export default function Tela1({ navigation}) {
+        let itemSave = {}
     return <>
+
         <View style={estiloTela1.Principal}>
-            <FlatList 
-            data={Caixas}
-            renderItem={({item}) => <Container {...item} />}
-            
+            <FlatList
+                contentContainerStyle={{paddingBottom: 20}}
+                data={Caixas}
+                renderItem={({ item }) =>
+                    <TouchableOpacity onPress={() => {
+                        itemSave = item
+                        
+                        navigation.navigate("Tela3", {itemSave})
+                    }}>
+                        <Container {...item} />
+                    </TouchableOpacity>}
+                keyExtractor={({ id }) => String(id)}
             />
-            
+
+                
+
         </View>
     </>
 }
+
+
+
+
+
+
+
+// const renderItem = ({
+//     item: {id, img, data, humor, color, hora, icone1, icone2, icone3, acao1, acao2, acao3, comentario},
+// }) => {
+//     return(
+//         <TouchableOpacity
+//         onPress={() => {
+//             ItemSave.id = id;
+//             ItemSave.img = img;
+//             ItemSave.data = data;
+//             ItemSave.humor = humor;
+//             ItemSave.color = color;
+//             ItemSave.hora = hora;
+//             ItemSave.icone1 = icone1;
+//             ItemSave.icone2 = icone2;
+//             ItemSave.icone3 = icone3;
+//             ItemSave.acao1 = acao1;
+//             ItemSave.acao2 = acao2;
+//             ItemSave.acao3 = acao3;
+//         }}>
+//             <Container {...item}/>
+//         </TouchableOpacity>
+//     );
+// };
+
+
+
+
+// return <>
+//     <View style={estiloTela1.Principal}>
+//         <FlatList
+//             data={Caixas}
+//             renderItem={ renderItem }
+//             keyExtractor={item => item.id}      
+
+//         />
+
+
+//     </View>
+// </>
+// }
+
+
+
+
+
+
+
 
 
 
