@@ -17,10 +17,10 @@ const Caixas = [
         hora: "08:35",
         icone1 : "run" ,
         acao1 : "correr",
-        icone2 : "drink",
+        icone2 : "sports-handball",
         acao2 : "esporte",
-        icone3 : "drink",
-        acao3: "cozinhar",
+        icone3 : "restaurant",
+        acao3: "comer",
         comentario: "Hoje foi um dia muito bom. Joguei futebol no parque, cozinhei uma lasanha para minha família. E à noite, fui à festa de aniversário do meu amigo."
     },
     {
@@ -30,13 +30,13 @@ const Caixas = [
         humor: "MAL",
         color: "blue",
         hora: "08:35",
-        icone1 : "run" ,
-        acao1 : "festa",
-        icone2 : "drink",
-        acao2 : "esporte",
-        icone3 : "drink",
-        acao3: "cozinhar",
-        comentario: "Luiza gosta de Java"
+        icone1 : "pencil-outline" ,
+        acao1 : "desenhar",
+        icone2 : "store",
+        acao2 : "comprar",
+        icone3 : "two-wheeler",
+        acao3: "dirigir",
+        comentario: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, orci eu pharetra elementum, erat enim pulvinar diam, ut facilisis nisi diam in sem."
     },
     {
         id: 3,
@@ -45,13 +45,13 @@ const Caixas = [
         humor: "TRISTE",
         color: "green",
         hora: "08:35",
-        icone1 : "run" ,
-        acao1 : "festa",
-        icone2 : "drink",
-        acao2 : "esporte",
-        icone3 : "drink",
-        acao3: "cozinhar",
-        comentario: "Carlos gosta de Java"
+        icone1 : "axe" ,
+        acao1 : "lenhar",
+        icone2 : "hotel",
+        acao2 : "dormir",
+        icone3 : "golf-course",
+        acao3: "jogar golf",
+        comentario: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, orci eu pharetra elementum, erat enim pulvinar diam, ut facilisis nisi diam in sem."
     },
     {
         id: 4,
@@ -60,13 +60,13 @@ const Caixas = [
         humor: "BEM",
         color: "red",
         hora: "08:35",
-        icone1 : "run" ,
-        acao1 : "festa",
-        icone2 : "drink",
-        acao2 : "esporte",
-        icone3 : "drink",
-        acao3: "cozinhar",
-        comentario: "Hoje foi um dia muito bom. Joguei..."
+        icone1 : "yoga" ,
+        acao1 : "yoga",
+        icone2 : "emoji-symbols",
+        acao2 : "estudar",
+        icone3 : "fastfood",
+        acao3: "comer",
+        comentario: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, orci eu pharetra elementum, erat enim pulvinar diam, ut facilisis nisi diam in sem."
     },
     {
         id: 5,
@@ -75,13 +75,13 @@ const Caixas = [
         humor: "BEM",
         color: "red",
         hora: "08:35",
-        icone1 : "run" ,
-        acao1 : "festa",
-        icone2 : "drink",
-        acao2 : "esporte",
-        icone3 : "drink",
-        acao3: "cozinhar",
-        comentario: "Hoje foi um dia muito bom. Joguei..."
+        icone1 : "trumpet" ,
+        acao1 : "tocar",
+        icone2 : "computer",
+        acao2 : "trabalhar",
+        icone3 : "local-restaurant",
+        acao3: "jantar",
+        comentario: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, orci eu pharetra elementum, erat enim pulvinar diam, ut facilisis nisi diam in sem."
     },
     {
         id: 6,
@@ -90,13 +90,13 @@ const Caixas = [
         humor: "BEM",
         color: "red",
         hora: "08:35",
-        icone1 : "run" ,
-        acao1 : "festa",
-        icone2 : "drink",
-        acao2 : "esporte",
-        icone3 : "drink",
-        acao3: "cozinhar",
-        comentario: "Hoje foi um dia muito bom. Joguei..."
+        icone1 : "kitesurfing" ,
+        acao1 : "surfar",
+        icone2 : "pedal-bike",
+        acao2 : "pedalar",
+        icone3 : "sports-mma",
+        acao3: "lutar",
+        comentario: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, orci eu pharetra elementum, erat enim pulvinar diam, ut facilisis nisi diam in sem."
     }
 ]
 export default Caixas

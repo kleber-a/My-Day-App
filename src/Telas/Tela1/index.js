@@ -18,7 +18,6 @@ export default function Tela1({ navigation}) {
                 renderItem={({ item }) =>
                     <TouchableOpacity onPress={() => {
                         itemSave = item
-                        
                         navigation.navigate("Tela3", {itemSave})
                     }}>
                         <Container {...item} />

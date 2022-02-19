@@ -128,11 +128,12 @@ const estiloTela1 = StyleSheet.create({
     icon1: {
         width: 20.56,
         height: 20.56,
-        marginLeft: 10
+        marginLeft: 10,
+        marginRight: 2
     },
     txt1caixa2: {
         fontWeight: "600",
-        width: 50,
+        width: 60,
         height: 19.14,
         color: "black",
         marginLeft: 1
@@ -141,7 +142,7 @@ const estiloTela1 = StyleSheet.create({
     ponto: {
         height: "100%",
         marginVertical: 10,
-        marginLeft: 5,
+        marginLeft: 2,
         color: "black"
     },
     //=======================
@@ -152,7 +153,7 @@ const estiloTela1 = StyleSheet.create({
     },
     txt2caixa2: {
         fontWeight: "600",
-        width: 50,
+        width: 60,
         height: 19.14,
         color: "black",
         marginLeft: 10

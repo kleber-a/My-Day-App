@@ -9,7 +9,7 @@ export default function TelaLogin({ navigation }){
     const entrar = () => {
         navigation.reset({
             index: 0,
-            routes: [{name:"auxilio"}]
+            routes: [{name:"MyTabs"}]
         })
     }
 
