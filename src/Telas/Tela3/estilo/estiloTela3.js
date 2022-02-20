@@ -54,7 +54,7 @@ const estiloTela3 = StyleSheet.create({
     txtHumor: {
         color: "red",
         backgroundColor: "#E5E5E5",
-        width: 50,
+        width: 100,
         fontWeight: "700",
         fontSize: 22,
         marginLeft: 70,
@@ -75,15 +75,21 @@ const estiloTela3 = StyleSheet.create({
         width: "100%",
         height: "50%",
         flexDirection: "row",
-        paddingTop: 40,
-        borderRadius: 20
+        paddingTop: 30,
+        borderRadius: 20,
 
     },
 
+ 
+
     iconeacao: {
-        marginLeft: 50,
+        width: 45,
+        height: 45,
+        marginLeft: 48,
         backgroundColor: "#304FFE",
-        borderRadius: 500   
+        borderRadius: 500,
+        
+           
     },
 
     caixaAcaoTexto: {
@@ -95,8 +101,9 @@ const estiloTela3 = StyleSheet.create({
     },
 
     textoacao: {
-        marginLeft: 48,
-        fontSize: 15,
+        marginLeft: 30,
+        marginRight: 10,
+        fontSize: 16,
         fontWeight: "600",
         marginTop: 5
     },

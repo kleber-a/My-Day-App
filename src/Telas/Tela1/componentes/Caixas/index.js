@@ -15,13 +15,13 @@ const Caixas = [
         humor: "BEM",
         color: "red",
         hora: "08:35",
-        icone1 : "run" ,
-        acao1 : "correr",
+        icone1 : "human-male-female-child" ,
+        acao1 : "familia",
         icone2 : "sports-handball",
         acao2 : "esporte",
         icone3 : "restaurant",
         acao3: "comer",
-        comentario: "Hoje foi um dia muito bom. Joguei futebol no parque, cozinhei uma lasanha para minha família. E à noite, fui à festa de aniversário do meu amigo."
+        comentario: "Hoje foi um dia muito bom. Joguei handbool no parque, cozinhei uma lasanha para minha família. E à noite, fui à festa de aniversário do meu amigo."
     },
     {
         id: 2,
