@@ -2,8 +2,9 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TelaLogin from '../../Telas/TelaLogin';
 import MyTabs from '../MyTabs'
-
-
+import Tela1 from '../../Telas/Tela1'
+import Criacao from '../../Telas/Criacao'
+import Teste from '../../Telas/Teste'
 
 
 Stack = createNativeStackNavigator();
@@ -19,6 +20,18 @@ function MyStack() {
       <Stack.Screen
         options={{ headerShown: false }}
         name="MyTabs" component={MyTabs} />
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Tela1" component={Tela1} />
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Criacao" component={Criacao} />
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Teste" component={Teste} />
 
     </Stack.Navigator>
 
