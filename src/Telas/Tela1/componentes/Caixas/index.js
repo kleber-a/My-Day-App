@@ -97,6 +97,20 @@ const Caixas = [
         icone3 : "sports-mma",
         acao3: "lutar",
         comentario: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, orci eu pharetra elementum, erat enim pulvinar diam, ut facilisis nisi diam in sem."
-    }
+    },
+
+    {"id":1,
+    "mood":"happy",
+    "created_at":"2022-02-21T20:19:59.670Z",
+    "updated_at":"2022-02-21T20:19:59.670Z",
+    "username":"joaopedro",
+    "short_description":"Hoje foi m...",
+    "activities":[
+        {"id":1,"name":"sports"},
+        {"id":2,"name":"rest"},
+        {"id":3,"name":"rest"}
+    ]},
+    
+
 ]
 export default Caixas

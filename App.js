@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native'
+import React, { Component, useEffect, useState } from 'react';
+import { View, Text, FlatList, StyleSheet, Button, Alert } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import MyStack from './src/Routes/MyStack';
 import api, { addUser, getUser, getUseractives, deleteUser } from './src/services/api';
@@ -7,10 +7,17 @@ import Atividades from './src/Telas/Atividades';
 
 
 export default function App() {
+  const [contagem, setContagem] = useState(200)
+  const [name, setName] = useState('')
+  const [teste, setTeste] = useState(contagem>100? 'Certo' : 'Errado')
+  
+
   return (
-    <NavigationContainer>
-      <MyStack />
-    </NavigationContainer>
+    <View>
+      <Text>{teste}</Text>
+      <Text>{name}</Text>
+    </View>
+
   )
 }
 
@@ -18,10 +25,30 @@ export default function App() {
 
 
 
+{/* <NavigationContainer>
+<MyStack />
+</NavigationContainer>  */}
 
 
 
 
+// useEffect(()=>{}, [])
+
+// function 
+
+
+
+
+
+{/* <View style={{ alignItems: 'center' }}>
+<Text style={{ marginTop: 80 }}>Teste acrescentar array</Text>
+<Button
+  title="Press me"
+  onPress={() => setContagem(),
+    console.warn(contagem)
+  }
+/>
+</View> */}
 
 
 

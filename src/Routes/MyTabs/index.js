@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 
 export default function MyTabs() {
 
-  const ChatBase = () => <View style={{ flex: 1, backgroundColor: "red" }} />
+  const TelaSuporte = () => <View style={{ flex: 1, backgroundColor: "red" }} />
 
   return (
     <Tab.Navigator initialRouteName='Principal' screenOptions={{ tabBarShowLabel: false, headerShown: false }} >
@@ -28,7 +28,7 @@ export default function MyTabs() {
       }} name="Principal" component={Principal} />
 
       <Tab.Screen
-      name="ChatBase" component={ChatBase}
+      name="TelaSuporte" component={TelaSuporte}
       options={{
        tabBarIcon: () => <Icone name="menu" color={"#304FFE"} size={30} />,
       }}

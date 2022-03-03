@@ -69,7 +69,7 @@ const estiloTelaCriacao = StyleSheet.create({
     },
 
     humores: {
-        marginHorizontal: 10
+        marginHorizontal: 10,
     },
 
     img: {

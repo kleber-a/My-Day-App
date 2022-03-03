@@ -15,11 +15,38 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 
 
 function Teste({ navigation }) {
-    const [name, setName] = useState('Leandro');
-    const [input, setInput] = useState('')
+    const [carregando, setCarregando] = useState(true)
     const [modalVisible, setmodalVisible] = useState(true)
     const [atividades, setAtividades] = useState([])
-    const [carregando, setCarregando] = useState(true)
+    const [data, setData] = useState('')
+    const [hora, setHora] = useState('')
+    let [contador, setContador] = useState(0)
+
+
+
+    useEffect(() => {
+        let date = new Date().getDate() // Data
+
+        var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+        let month = new Date().getMonth()  //Mes
+
+        let year = new Date().getFullYear() //Ano
+
+        let hours = new Date().getHours() //Horas
+        let min = new Date().getMinutes() //Minutos
+        //Set Data 
+        setData(
+            'HOJE, ' + date + ' DE ' + meses[month].toUpperCase()
+        )
+        //Set Hora
+        setHora(
+            hours + ":" + min
+        )
+        return () => {
+
+        }
+    }, [])
+
 
     useEffect(() => {
 
@@ -37,11 +64,20 @@ function Teste({ navigation }) {
     }, [])
 
 
+    useEffect(() => {
+        
+        function contagemBotao(){
+            let contadorr = 0
+            
+            setContador(contadorr+1)
+        }
+
+    
+    }, [contador])
 
 
-    let dado = atividades
 
-    console.warn(dado)
+    console.warn(contador)
 
 
     return (
@@ -58,8 +94,9 @@ function Teste({ navigation }) {
                     <Text style={estiloTelaCriacao.h1}>Como você esta?</Text>
 
                     <View style={estiloTelaCriacao.caixaDate}>
-                        <Calendar style={estiloTelaCriacao.icones} name="calendar" size={10} color={"gray"} >  Hoje, 23 DE JANEIRO</Calendar>
-                        <Clock style={estiloTelaCriacao.icones} name="clockcircleo" size={10} color={"gray"} >  08:35</Clock>
+
+                        <Calendar style={estiloTelaCriacao.icones} name="calendar" size={10} color={"gray"} > {data}</Calendar>
+                        <Clock style={estiloTelaCriacao.icones} name="clockcircleo" size={10} color={"gray"} > {hora}</Clock>
                     </View>
 
                     <View style={estiloTelaCriacao.emoji}>
@@ -92,13 +129,38 @@ function Teste({ navigation }) {
                     </View>
                 </View>
 
+
+
+
+
+
+
+
+
                 <View style={estiloTelaCriacao.caixaselecao}>
 
                     {atividades.map(atividades => (
                         <Atividades {...atividades} />
                     ))}
+                    {/* <FlatList
+                            data={atividades}
+                            keyExtractor={item => item.id.toString()}
+                            numColumns={3}
+                            renderItem={({ item }) =>
+
+                                <Atividades style={estiloTelaCriacao.dividerActivity1} {...item} />
+                            }
+                        /> */}
 
                 </View>
+
+
+
+
+
+
+
+
 
                 <View style={estiloTelaCriacao.caixacomentario}>
                     <TextInput placeholder="Escreva aqui..."></TextInput>
