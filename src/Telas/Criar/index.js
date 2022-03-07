@@ -170,8 +170,11 @@ function Criar({ navigation }) {
 
 
                             return (
-                                <TouchableOpacity key={id} onPress={() => pegarhumor(nome, id)} style={estiloTelaCriacao.humores}>
-                                    <Image style={[estiloTelaCriacao.img, { borderWidth: borderWidth, borderColor: borderColor, borderRadius: borderRadius }]} source={source} />
+                                <TouchableOpacity key={id} onPress={() => pegarhumor(nome, id)} 
+                                style={estiloTelaCriacao.humores}>
+                                    <Image style={[estiloTelaCriacao.img, 
+                                        { borderWidth: borderWidth, borderColor: borderColor, borderRadius: borderRadius }]}
+                                         source={source} />
                                     <Text>{nome}</Text>
 
 
@@ -201,7 +204,7 @@ function Criar({ navigation }) {
                 <View style={estiloTelaCriacao.caixaselecao}>
 
                     {atividades.map(atividades => (
-                        <Atividades key={atividades.key} {...atividades} />   
+                        <Atividades key={atividades.id} {...atividades} />   
 
                         
                     ))}

@@ -7,9 +7,8 @@ import Caixas from '../Tela1/componentes/Caixas'
 
 
 
-export default function Tela1({ navigation,route}) {
-    const Usuario = route.params?.user
-    console.warn(Usuario)
+export default function Tela1({ navigation}) {
+   
         let itemSave = {}
     return <>
 
@@ -18,13 +17,13 @@ export default function Tela1({ navigation,route}) {
                 contentContainerStyle={{paddingBottom: 20}}
                 data={Caixas}
                 renderItem={({ item }) =>
-                    <TouchableOpacity onPress={() => {
+                    <TouchableOpacity  onPress={() => {
                         itemSave = item
                         navigation.navigate("Tela3", {itemSave})
                     }}>
                         <Container {...item} />
                     </TouchableOpacity>}
-                keyExtractor={({ id }) => String(id)}
+                keyExtractor={item => item.id.toString()}
             />
 
                 

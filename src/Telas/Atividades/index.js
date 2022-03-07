@@ -69,13 +69,13 @@ function Atividades({ name, id}) {
          }
          if (name === 'date') {
                  setIcone('calendar'),
-                 setTexto('calendário')
+                 setTexto('planjear')
              
         
          }
          if (name === 'cooking') {
                  setIcone('cookie'),
-                 setTexto('biscoit')
+                 setTexto('comer')
              
          }
         }
@@ -86,7 +86,7 @@ function Atividades({ name, id}) {
 
 
         const[borderColor,setBorderColor] = useState('black')
-        const[background,setBackground] = useState('')
+        const[corfundo,setCorfundo] = useState('white')
         const[cor,setCor] = useState('black')
         const[borderwidth,setBorderwidth] = useState(2)
         const[borderradius,setBorderradius] = useState(20)
@@ -95,7 +95,7 @@ function Atividades({ name, id}) {
         function selecionar(){
             if(selecao === false){
                 setBorderColor("blue")
-                setBackground('blue')
+                setCorfundo('blue')
                 setCor('white')
                 setBorderradius(25)
                 setBorderwidth(3)
@@ -103,7 +103,7 @@ function Atividades({ name, id}) {
             }
             if(selecao === true){
                 setBorderColor("black")
-                setBackground('white')
+                setCorfundo('white')
                 setCor('black')
                 setBorderradius(25)
                 setBorderwidth(3)
@@ -128,7 +128,7 @@ function Atividades({ name, id}) {
                         borderWidth: borderwidth,
                         borderRadius: borderradius,
                         borderColor: borderColor,
-                        backgroundColor: background,
+                        backgroundColor: corfundo,
                         color: cor
                     }} 
                     
