@@ -19,27 +19,28 @@ export default function MyTabs() {
   return (
     <Tab.Navigator initialRouteName='Principal' screenOptions={{ tabBarShowLabel: false, headerShown: false }} >
 
-      <Tab.Screen options={{
-        tabBarIcon: () => <Icone name="home" color={"blue"} size={30} />,
-      }} name="MyStack2" component={MyStack2} />
+
 
       <Tab.Screen options={{
-        tabBarIcon: () => <Icon name="pluscircle" color={"blue"} size={48} />,
+        tabBarIcon: () => <Icone name="home" color={"blue"} size={30} />,
       }} name="Principal" component={Principal} />
 
       <Tab.Screen
-      name="TelaSuporte" component={TelaSuporte}
-      options={{
-       tabBarIcon: () => <Icone name="menu" color={"#304FFE"} size={30} />,
-      }}
-      listeners={({navigation}) => ({
-        tabPress: (e) => {
-          e.preventDefault()
-          navigation.navigate("Teste")
-        },
-      })}
-        
+        name="TelaSuporte" component={TelaSuporte}
+        options={{
+          tabBarIcon: () => <Icon name="pluscircle" color={"blue"} size={48} />,
+        }}
+        listeners={({ navigation }) => ({
+          tabPress: (e) => {
+            e.preventDefault()
+            navigation.navigate("Criar")
+          },
+        })}
       />
+
+      <Tab.Screen options={{
+        tabBarIcon: () => <Icone name="menu" color={"#304FFE"} size={30} />,
+      }} name="MyStack2" component={MyStack2} />
 
 
 

@@ -61,7 +61,7 @@ const estiloTelaCriacao = StyleSheet.create({
     emoji: {
         
         width: "100%",
-
+        
         height: 70,
         flexDirection: "row",
         alignItems: "center",
@@ -69,7 +69,8 @@ const estiloTelaCriacao = StyleSheet.create({
     },
 
     humores: {
-        marginHorizontal: 10,
+        alignItems:'center',
+        marginHorizontal: 5
     },
 
     img: {

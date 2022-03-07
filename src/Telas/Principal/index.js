@@ -5,6 +5,10 @@ import imgTelaHome from '../../../assets/image/neutral1.png'
 
 
 export default function Principal(){
+    
+
+    
+
     return <>
        <View style={estiloPrincipal.Tela}>
 

@@ -1,23 +1,21 @@
 import React, { Component, useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet, Button, Alert } from 'react-native'
+import { View, Text, FlatList, StyleSheet, Button, Alert, TouchableOpacity } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import MyStack from './src/Routes/MyStack';
 import api, { addUser, getUser, getUseractives, deleteUser } from './src/services/api';
-import Atividades from './src/Telas/Atividades';
+
+import estiloTelaCriacao from './src/Telas/Criacao/estiloCriacao';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+
+
+
 
 
 export default function App() {
-  const [contagem, setContagem] = useState(200)
-  const [name, setName] = useState('')
-  const [teste, setTeste] = useState(contagem>100? 'Certo' : 'Errado')
-  
-
-  return (
-    <View>
-      <Text>{teste}</Text>
-      <Text>{name}</Text>
-    </View>
-
+  return(
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
   )
 }
 
@@ -25,30 +23,6 @@ export default function App() {
 
 
 
-{/* <NavigationContainer>
-<MyStack />
-</NavigationContainer>  */}
-
-
-
-
-// useEffect(()=>{}, [])
-
-// function 
-
-
-
-
-
-{/* <View style={{ alignItems: 'center' }}>
-<Text style={{ marginTop: 80 }}>Teste acrescentar array</Text>
-<Button
-  title="Press me"
-  onPress={() => setContagem(),
-    console.warn(contagem)
-  }
-/>
-</View> */}
 
 
 
@@ -57,103 +31,181 @@ export default function App() {
 
 
 
-// export default class App extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       atividades: []
-//     }
+
+
+
+
+  // const [atividades, setAtividades] = useState([])
+  // const [carregando, setCarregando] = useState(true)
+  
+  
+  // const [borderRadius, setBorderRadius] = useState(30)
+  // const [borderWidth, setBorderWidth] = useState(3)
+  // const [borderColor, setBorderColor] = useState("#ACACAC")
+  
+  
+  
+  //   useEffect(() => {//Pegando dados pela API
+  //     async function getStorage() {
+  //         api.get("activities/")
+  //             .then(response => {
+  //                 const data = response.data
+  //                 setAtividades(data)
+  //             })
+  //             .catch(error => console.log(error))
+  //             .finally(() => setCarregando(false))
+  //     }
+  //     getStorage()
+  
+  // }, [])
+  
+  
+  
+  
+  // const[getname,setGetname] = useState([])
+  // const[getid,setGetid] = useState([])
+  // const [botaoselecao,setBotaoselecao] = useState(false)
+  
+  
+  
+  
+  // const [sports,setSports] = useState(() => ({
+  //   texto: '',
+  //   nameFinal: '',
+  //   id: 0
+  // }))
+  //   function mudarNomes(name, id){
+  //     if (name === 'sports'){
+  //       setSports((prev) => ({
+  //         nome: prev.nome =  'carro',
+  //         nameFinal: prev.nameFinal = 'car-sports',
+  //         id: prev.id = id 
+  //     }))
+  //     }
+  //     return sports
+  //   }
+  
+  
+    
+  //   return(
+  //    <View style={estiloTelaCriacao.caixaselecao}>
+  //      {atividades.map(({id,name}) => {
+         
+         
+         
+    //  function pegardados(valorname,valorid){
+    //       if(getname.length <3){  
+    //       setGetname([...getname, valorname])
+    //       setGetid([...getid, valorid])
+      
+  // }
+  // }
+  //        return(
+  //          <TouchableOpacity  style={{
+  //           borderWidth: borderWidth,
+  //           borderColor: borderColor,
+  //           borderRadius: borderRadius,
+  //           width: 50,
+  //           height: 50
+  //          }} onPress={() => pegardados(name,id)}>
+  //            <MaterialCommunityIcons name={name} size={30}/>
+  //            <Text></Text>
+            
+  //          </TouchableOpacity>
+  //        )
+  //      })}
+  
+  //     <Text>{getname}</Text>
+  //     {console.warn(getname)}
+  //     <Text>{getid}</Text>
+  //     {console.warn()}
+  
+  //    </View>
+  //   )
+  //     }
+      
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+// const [contagem, setContagem] = useState(200)
+//   const [name, setName] = useState('')
+//   const [teste, setTeste] = useState(() => ({
+//     total: 2,
+//     langs: [' python ', ' go '],
+//   }))
+
+//   function addlang() {
+//     if(teste.total<3 ){
+//     setTeste((prev) => ({
+//       total: prev.langs.length + 1,
+//       langs: [...prev.langs, 'js']
+//     }))
+//   }
+//   }
+//   function removelang() {
+//    if(teste.total>0){
+//     setTeste((prev) => ({
+//       total: prev.langs.length - 1,
+//       langs: prev.langs.slice(0, -1)
+//     }))
+//   }
 //   }
 
-//   async componentDidMount() {
-//     const response = await api.get('activities/')
-//     this.setState({
-//       atividades: response.data
-//     })
+
+//   const [data,setData] = useState(() => ({
+//     total: 0,
+//     ar : []
+//   }))
+
+//   function addar() {
+//     setData((prev) => ({
+//       total: prev.ar.length + 1,
+//       ar: [...prev.ar, 'filetext1']
+//     }))
 //   }
-
-
-
-
-// render(){
 
 
 //   return (
-//     <View style={{ width: "100%", height: "100%", backgroundColor: "red" }} >
+//     <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1, }}>
+      
+//       <Text>{data.total}</Text>
+//       <Text>{data.ar}</Text>
+//       <TouchableOpacity onPress={() => addar()} >
+//         <AntDesign size={50} name='filetext1' />
+//       </TouchableOpacity>
+      
+      
+      
+      
+//       <Text>{teste.total}</Text>
+//       <Text>{teste.langs}</Text>
+//       <Button
+//         onPress={() => addlang()}
+//         title="Aperte Aqui"
+//         color="#841584"
+//         accessibilityLabel="Learn more about this purple button"
+//       />
 
-//       <View style={estilo.dividerActivity}>
-
-//         {this.state.atividades.map(atividades => (
-
-//           <Atividades style={estilo.dividerActivity1} {...atividades} />
-
-//         ))}
-
-
-
-//         {/* <FlatList
-//         data={this.state.atividades}
-//         keyExtractor={item => item.id.toString()}
-//         renderItem={ ({item}) => 
-
-//         <Atividades style={estilo.dividerActivity1} {...item} /> 
-//       }
-//         /> */}
-//       </View>
-
+//       <Button
+//         onPress={() => removelang()}
+//         title="Aperte Aqui"
+//         color="#841584"
+//         accessibilityLabel="Learn more about this purple button"
+//       />
 //     </View>
-
-//   );
-// }
-// }
-
-
-// const estilo = StyleSheet.create({
-//   dividerActivity: {
-//     flexDirection: 'row',
-//     justifyContent: 'flex-start',
-//     flexWrap: 'wrap',
-//     alignContent: 'stretch',
-//     width: 200,
-//     height: 200,
-
-//     backgroundColor: '#E5E5E5',
-//     borderRadius: 20,
-//     padding: 35,
-
-//     shadowColor: "#000",
-//     shadowOffset: {
-//       width: 0,
-//       height: 2
-//     },
-//     shadowOpacity: 0.75,
-//     shadowRadius: 4,
-//     elevation: 5
-//   },
-
-//   dividerActivity1: {
-//     width: 100,
-//     height: 60
-//   },
-
-
-// })
-
-
-// //27 de março
-
-{/* <NavigationContainer>
-<MyStack />
-</NavigationContainer> */}
-
-
-
-// // const User = {
-// //   "id": 1,
-// //   "mood": "happy",
-// //   "created_at": "2022-02-21T20:19:59.670Z",
-// //   "updated_at": "2022-02-21T20:19:59.670Z",
-// //   "username": "francislene",
-// //   "short_description": "Hoje foi m...",
-// //   "activities": [{ "id": 1, "name": "sports" },  { "id": 3, "name": "rest" }]
-// // }
+//   )

@@ -4,7 +4,8 @@ import TelaLogin from '../../Telas/TelaLogin';
 import MyTabs from '../MyTabs'
 import Tela1 from '../../Telas/Tela1'
 import Criacao from '../../Telas/Criacao'
-import Teste from '../../Telas/Teste'
+import Criar from '../../Telas/Criar'
+import Atividades from '../../../src/Telas/Atividades'
 
 
 Stack = createNativeStackNavigator();
@@ -31,7 +32,11 @@ function MyStack() {
 
       <Stack.Screen
         options={{ headerShown: false }}
-        name="Teste" component={Teste} />
+        name="Criar" component={Criar} />
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Atividades" component={Atividades} />
 
     </Stack.Navigator>
 
