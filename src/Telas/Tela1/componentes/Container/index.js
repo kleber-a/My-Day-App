@@ -49,12 +49,12 @@ export default function Container({ created_at, activities, mood, short_descript
     const [data, setData] = useState('')
     const [hora, setHora] = useState('') 
     useEffect(() => {
-        let date = new Date().getDate(created_at) // Data
+        let date = new Date(created_at).getDate() // Data
         var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-        let month = new Date().getMonth(created_at)  //Mes
-        let year = new Date().getFullYear(created_at) //Ano
-        let hours = new Date().getHours(created_at) //Horas
-        let min = new Date().getMinutes(created_at) //Minutos
+        let month = new Date(created_at).getMonth()  //Mes
+        let year = new Date(created_at).getFullYear() //Ano
+        let hours = new Date(created_at).getHours() //Horas
+        let min = new Date(created_at).getMinutes() //Minutos
         //Set Data 
         setData(
              date + ' DE ' + meses[month].toUpperCase()
@@ -66,8 +66,8 @@ export default function Container({ created_at, activities, mood, short_descript
         return () => {
         }
     }, [])
-
-    console.warn(created_at)
+    let daa = new Date(created_at).getMinutes()
+ 
 
         return(
             <View style={estiloTela1.container}>

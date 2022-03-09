@@ -69,15 +69,15 @@ export default function Tela3({ route: { params }, navigation }) {
     const [data, setData] = useState('')
     const [hora, setHora] = useState('')    
     useEffect(() => {
-        let date = new Date().getDate(dados.created_at) // Data
+        let date = new Date(dados.created_at).getDate() // Data
         var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-        let month = new Date().getMonth(dados.created_at)  //Mes
-        let year = new Date().getFullYear(dados.created_at) //Ano
-        let hours = new Date().getHours(dados.created_at) //Horas
-        let min = new Date().getMinutes(dados.created_at) //Minutos
+        let month = new Date(dados.created_at).getMonth()  //Mes
+        let year = new Date(dados.created_at).getFullYear() //Ano
+        let hours = new Date(dados.created_at).getHours() //Horas
+        let min = new Date(dados.created_at).getMinutes() //Minutos
         //Set Data 
         setData(
-            'HOJE, ' + date + ' DE ' + meses[month].toUpperCase()
+            'HOJE, ' + date + ' DE ' + meses[month]
         )
         //Set Hora
         setHora(
@@ -92,7 +92,6 @@ export default function Tela3({ route: { params }, navigation }) {
     
 
 
-console.warn(data)
     
 
     return (
