@@ -35,27 +35,27 @@ export default function Tela3({ route: { params }, navigation }) {
     const[pegarCor,setPegarCor] = useState()
     
     useEffect(()=> {
-        if(dados.mood === 'happy' && dados ===true){
+        if(dados.mood === 'happy' ){
             setPegarHumor(require('../../../assets/image/humores/happy.png'))
             setPegarTexto('BEM')
             setPegarCor('red')
         }
-        if(dados.mood === 'confused' && dados ===true){
+        if(dados.mood === 'confused' ){
             setPegarHumor(require('../../../assets/image/humores/confused.png'))
             setPegarTexto('CONFUSO')
             setPegarCor('#AFAF')
         }
-        if(dados.mood === 'nervous' && dados ===true){
+        if(dados.mood === 'nervous' ){
             setPegarHumor(require('../../../assets/image/humores/nervous.png'))
             setPegarTexto('MAL')
             setPegarCor('blue')
         }
-        if(dados.mood === 'sad' && dados ===true){
+        if(dados.mood === 'sad' ){
             setPegarHumor(require('../../../assets/image/humores/sad.png'))
             setPegarTexto('TRISTE')
             setPegarCor('green')
         }
-        if(dados.mood === 'sleeping' && dados ===true){
+        if(dados.mood === 'sleeping' ){
             setPegarHumor(require('../../../assets/image/humores/sleeping.png'))
             setPegarTexto('DORMINDO')
             setPegarCor('purple')
@@ -89,8 +89,7 @@ export default function Tela3({ route: { params }, navigation }) {
     
     const dia = new Date().getDate(dados.created_at)
 
-    
-
+    console.warn(pegarTexto)
 
     
 
@@ -102,12 +101,15 @@ export default function Tela3({ route: { params }, navigation }) {
             </TouchableOpacity>
 
             <View style={estiloTela3.caixagrande}>
-
+                
                 <Clock style={estiloTela3.icones} name="clockcircleo" size={10} color={"gray"} >{hora}</Clock>
                 <Calendar style={estiloTela3.icones} name="calendar" size={10} color={"gray"} >{data}</Calendar>
+            
+                     <Image style={estiloTela3.image} source={pegarHumor} />
+                     <Text style={[estiloTela3.txtHumor, { color: pegarCor }]}>{pegarTexto}</Text>
 
-                <Image style={estiloTela3.image} source={pegarHumor} />
-                <Text style={[estiloTela3.txtHumor, { color: pegarCor }]}>{pegarTexto}</Text>
+               
+               
             </View>
 
 

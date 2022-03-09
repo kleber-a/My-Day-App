@@ -65,20 +65,21 @@ function Criar({ navigation }) {
     }, [])
 
 
-    const [humor, setHumor] = useState([])
-    const [comentario, setComentario] = useState('')
-
+    const [humor, setHumor] = useState()
+    const [comentario, setComentario] = useState()
+    
  // const date = new Date(created_at)
 
-    const [user1,setUser1] = useState({
+    const [user,setUser] = useState({
         daily_entry: {
-            mood: 'nervous',
+            mood: humor,
             activity_ids: [1, 5, 3],       
-            description: "testee",        
+            description: comentario,        
             username: "KleberAndrade"    
         }
     })  
-   
+
+
     function postApi(valor){
         api.post("daily_entries/",valor)
         .then(response =>{
@@ -89,7 +90,7 @@ function Criar({ navigation }) {
     }
     
 
-
+    console.warn(humor)
 
     return (
         <Modal animationType='slide' visible={modalVisible}>
@@ -220,7 +221,7 @@ function Criar({ navigation }) {
                 </View>
 
                 <TouchableOpacity style={estiloTelaCriacao.botaao}
-                     onPress={() => {[ postApi(user1) ,navigation.navigate("MyTabs") ]}}>
+                     onPress={() => {[ postApi(user) ,navigation.navigate("MyTabs") ]}}>
                     <Text style={{ fontSize: 15, color: 'white' }}>Salvar</Text>
                 </TouchableOpacity>
             </View>
