@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import estiloTela1 from '../../../estilo/estiloTela1'
 import Ponto from 'react-native-vector-icons/FontAwesome'
@@ -6,20 +6,65 @@ import MaterialC from 'react-native-vector-icons/MaterialCommunityIcons'
 import MaterialI from 'react-native-vector-icons/MaterialIcons'
 
 
-export default function({icone1,acao1,icone2,acao2,icone3,acao3}){
-    return <>
-    <View style={estiloTela1.caixa2}>
-                <MaterialC style={estiloTela1.icon1} name={icone1} size={20} color={"black"} />
-                <Text style={estiloTela1.txt1caixa2}>{acao1}</Text>
-                <Ponto style={estiloTela1.ponto} name="circle" color={"blue"} size={4} />
+export default function ContainerMeio ({ id, name }) {
 
-                <MaterialI style={estiloTela1.icon2} name={icone2} size={20} color={"black"} />
-                <Text style={estiloTela1.txt2caixa2}>{acao2}</Text>
-                <Ponto style={estiloTela1.ponto} name="circle" color={"blue"} size={4} />
 
-                <MaterialI  style={estiloTela1.icon3} name={icone3} size={20} color={"black"} />
-                <Text style={estiloTela1.txt3caixa2}>{acao3}</Text>
-            </View>
+    const [icone,setIcone] = useState()
+    const [texto,setTexto] = useState()
+
+
+    function condicao() {
+        if (name === 'sports') {
+            setIcone('car-sports'),
+             setTexto('carro') 
+         }
+         if (name === 'shopping') {
+                 setIcone(name),
+                 setTexto('compras')
+         }
+         if (name === 'rest') {
+                 setIcone('walk'),
+                 setTexto('correr')
+         }
+         if (name === 'party') {
+                 setIcone('party-popper')
+                 setTexto('festa')
+         }
+         if (name === 'movies') {
+                 setIcone('movie'),
+                 setTexto('filme')
+         }
+         if (name === 'good_meal') {
+                 setIcone('arm-flex'),
+                 setTexto('malhaçao')
+         }
+        
+         if (name === 'games') {
+                 setIcone('gamepad'),
+                 setTexto('jogar')
+         }
+         if (name === 'date') {
+                 setIcone('calendar'),
+                 setTexto('planjear')
+         }
+         if (name === 'cooking') {
+                 setIcone('cookie'),
+                 setTexto('comer')
+         }
+        }
     
-    </>
+    useEffect(() => { condicao() }, [])
+
+
+
+    return (
+
+        <>
+            <MaterialC style={estiloTela1.icon1} name={icone} size={20} color={"black"} />
+            <Text style={estiloTela1.txt1caixa2}>{texto}</Text>
+            <Ponto style={estiloTela1.ponto} name="circle" color={"blue"} size={4} />
+
+        </>
+
+    )
 }

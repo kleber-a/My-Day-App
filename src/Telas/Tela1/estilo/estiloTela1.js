@@ -26,7 +26,7 @@ const estiloTela1 = StyleSheet.create({
 
     //Caixa1
     caixa1: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#FFFF",
         width: "100%",
         height: "50%",
         borderRadius: 20,
@@ -120,58 +120,37 @@ const estiloTela1 = StyleSheet.create({
         backgroundColor: "#FFFF",
         width: "100%",
         height: "20%",
-        flexDirection: "row",
-        paddingLeft: 2,
-        paddingVertical: 5
+        flexDirection: 'row',
+        justifyContent:'flex-start',
+        paddingHorizontal: 15
+        
+        
     },
     //=====================
     icon1: {
         width: 20.56,
         height: 20.56,
-        marginLeft: 10,
-        marginRight: 2
+        marginLeft: 0,
+        marginRight: 5
     },
     txt1caixa2: {
         fontWeight: "600",
-        width: 60,
+        width: 45,
         height: 19.14,
         color: "black",
-        marginLeft: 1
+       
 
     },
     ponto: {
+        width: 15,
         height: "100%",
         marginVertical: 10,
-        marginLeft: 2,
-        color: "black"
+        color: "black",
+        
     },
     //=======================
-    icon2: {
-        width: 20.56,
-        height: 20.56,
-        marginLeft: 10
-    },
-    txt2caixa2: {
-        fontWeight: "600",
-        width: 60,
-        height: 19.14,
-        color: "black",
-        marginLeft: 10
-    },
-    //========================
-    icon3: {
-        width: 20.56,
-        height: 20.56,
-        marginLeft: 10
+    
 
-    },
-    txt3caixa2: {
-        color: "black",
-        width: 70,
-        height: 19.14,
-        fontWeight: "600",
-        marginLeft: 10
-    },
 
     //Caixa3
     caixa3: {

@@ -6,19 +6,19 @@ import MaterialC from 'react-native-vector-icons/MaterialCommunityIcons'
 import MaterialI from 'react-native-vector-icons/MaterialIcons'
 
 
-export default function ContainerCima({img,data,humor,color,hora}) {
+export default function ContainerCima({img,data,humor,color,hora,mood}) {
     
 
     return <>
 
         <View style={estiloTela1.caixa1}>
-
+        <Happy />
             <View style={estiloTela1.caixa1image} >
-                <Image style={estiloTela1.img} source={img} />
+                <Image style={estiloTela1.img}/>
             </View>
 
             <View style={estiloTela1.caixa1TextoCima}>
-                <Text style={estiloTela1.texto1}>{data}</Text>
+                <Text style={estiloTela1.texto1}>{mood}</Text>
 
                 <Text style={[estiloTela1.humor, { color: color }]}>{humor}
 

@@ -30,7 +30,6 @@ function Criar({ navigation }) {
     const [hora, setHora] = useState('')
 
 
-
     useEffect(() => {
         let date = new Date().getDate() // Data
         var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
@@ -69,31 +68,19 @@ function Criar({ navigation }) {
     const [humor, setHumor] = useState([])
     const [comentario, setComentario] = useState('')
 
-    const user = {
-        id: 1,
-        description: comentario,
-        mood: humor,
-        created_at: "",
-        updated_at: "",
-        username: "KleberAndrade",
-        activities: [
-            {
-                id: 1,
-                name: "sports"
-            },
-            {
-                id: 3,
-                name: "rest"
-            },
-            {
-                id: 3,
-                name: "rest"
-            }
-        ]
-    }
+ // const date = new Date(created_at)
 
-    function postApi(dailyentries){
-        api.post("daily_entries/",dailyentries)
+    const [user1,setUser1] = useState({
+        daily_entry: {
+            mood: 'nervous',
+            activity_ids: [1, 5, 3],       
+            description: "testee",        
+            username: "KleberAndrade"    
+        }
+    })  
+   
+    function postApi(valor){
+        api.post("daily_entries/",valor)
         .then(response =>{
             const data = response.data  
             console.warn(data)
@@ -124,7 +111,7 @@ function Criar({ navigation }) {
                     </View>
 
                     <View style={estiloTelaCriacao.emoji}>
-                        {Humorr.map(({ nome, source, id }) => {
+                        {Humorr.map(({ nome, source, id,name }) => {
                             const [borderRadius, setBorderRadius] = useState()
                             const [borderWidth, setborderWidth] = useState()
                             const [borderColor, setborderColor] = useState()
@@ -170,7 +157,7 @@ function Criar({ navigation }) {
 
 
                             return (
-                                <TouchableOpacity key={id} onPress={() => pegarhumor(nome, id)} 
+                                <TouchableOpacity key={id} onPress={() => pegarhumor(name, id)} 
                                 style={estiloTelaCriacao.humores}>
                                     <Image style={[estiloTelaCriacao.img, 
                                         { borderWidth: borderWidth, borderColor: borderColor, borderRadius: borderRadius }]}
@@ -189,7 +176,7 @@ function Criar({ navigation }) {
 
 
                     </View>
-                    
+                   
 
                 </View>
 
@@ -233,7 +220,7 @@ function Criar({ navigation }) {
                 </View>
 
                 <TouchableOpacity style={estiloTelaCriacao.botaao}
-                    key={user.id} onPress={() => {[ postApi(user) ,navigation.navigate("MyTabs", { user }) ]}}>
+                     onPress={() => {[ postApi(user1) ,navigation.navigate("MyTabs") ]}}>
                     <Text style={{ fontSize: 15, color: 'white' }}>Salvar</Text>
                 </TouchableOpacity>
             </View>

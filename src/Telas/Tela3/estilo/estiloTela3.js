@@ -65,9 +65,10 @@ const estiloTela3 = StyleSheet.create({
         width: 320,
         height: 158,
         backgroundColor: "#FFFFFF",
-        marginTop: 30,
+        marginTop: 10,
         marginHorizontal: 20,
-        borderRadius: 20
+        borderRadius: 20,
+        flexDirection: 'row'
     },
 
     caixaAcaoIcone: {
@@ -77,7 +78,8 @@ const estiloTela3 = StyleSheet.create({
         flexDirection: "row",
         paddingTop: 30,
         borderRadius: 20,
-
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
  
@@ -85,7 +87,7 @@ const estiloTela3 = StyleSheet.create({
     iconeacao: {
         width: 45,
         height: 45,
-        marginLeft: 48,
+        marginLeft: 0,
         backgroundColor: "#304FFE",
         borderRadius: 500,
         

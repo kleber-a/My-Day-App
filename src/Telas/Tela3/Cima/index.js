@@ -5,7 +5,15 @@ import Calendar from 'react-native-vector-icons/AntDesign'
 import Clock from 'react-native-vector-icons/AntDesign'
 
 
-export default function Cima({hora,data,img,humor,color}) {
+
+export default function Cima({hora,data,img,humor,mood}) {
+
+    const[pegarHumor,setPegarHumor] = useState()
+    const[pegarTexto,setPegarTexto] = useState()
+    const[pegarCor,setPegarCor] = useState()
+    
+    
+
     return <>
         <View style={estiloTela3.caixagrande}>
 
