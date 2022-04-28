@@ -40,7 +40,7 @@ export default function Meio(props) {
         }
         function condicaotexto(name) {
             if (name === 'sports') {   
-                 const name = 'carro'
+                 const name = 'dirigir'
                      return  name    
              }
              if (name === 'shopping') {

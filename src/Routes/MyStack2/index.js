@@ -10,7 +10,7 @@ Stack = createNativeStackNavigator();
 function MyStack2() {
   return (
 
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator initialRouteName="Tela1">
       <Stack.Screen
         options={{headerShown: false}} 
         name="Tela1" component={Tela1} />

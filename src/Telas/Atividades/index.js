@@ -22,7 +22,7 @@ function Atividades({ name, id}) {
     function condicao() {
         if (name === 'sports') {
             setIcone('car-sports'),
-             setTexto('carro')
+             setTexto('dirigir')
            
          }
         

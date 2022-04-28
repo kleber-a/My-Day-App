@@ -11,14 +11,14 @@ export default function Cima({hora,data,img,humor,mood}) {
     const[pegarHumor,setPegarHumor] = useState()
     const[pegarTexto,setPegarTexto] = useState()
     const[pegarCor,setPegarCor] = useState()
-    
+   
     
 
     return <>
         <View style={estiloTela3.caixagrande}>
 
-            <Clock style={estiloTela3.icones} name="clockcircleo" size={10} color={"gray"} >{hora}</Clock>
-            <Calendar style={estiloTela3.icones} name="calendar" size={10} color={"gray"} >{data}</Calendar>
+            <Clock style={estiloTela3.icones} name="clockcircleo" size={10} color={"gray"} >{hora && hora}</Clock>
+            <Calendar style={estiloTela3.icones} name="calendar" size={10} color={"gray"} >{data && hora}</Calendar>
 
             <Image style={estiloTela3.image} source={img} />
             <Text style={[estiloTela3.txtHumor, { color: color }]}>{humor}</Text>

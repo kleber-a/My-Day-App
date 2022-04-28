@@ -16,7 +16,7 @@ export default function ContainerMeio ({ id, name }) {
     function condicao() {
         if (name === 'sports') {
             setIcone('car-sports'),
-             setTexto('carro') 
+             setTexto('dirigir') 
          }
          if (name === 'shopping') {
                  setIcone(name),

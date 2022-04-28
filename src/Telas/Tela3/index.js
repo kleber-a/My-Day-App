@@ -89,7 +89,7 @@ export default function Tela3({ route: { params }, navigation }) {
     
     const dia = new Date().getDate(dados.created_at)
 
-    console.warn(pegarTexto)
+    
 
     
 
@@ -108,8 +108,6 @@ export default function Tela3({ route: { params }, navigation }) {
                      <Image style={estiloTela3.image} source={pegarHumor} />
                      <Text style={[estiloTela3.txtHumor, { color: pegarCor }]}>{pegarTexto}</Text>
 
-               
-               
             </View>
 
 
