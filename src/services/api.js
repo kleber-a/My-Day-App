@@ -54,6 +54,19 @@ export async function getStorage() {
   }
 }
 
+export async function getId(id){
+  try {
+    const response = api.get("daily_entries/" + id);
+    return response
+    
+  } catch (error) {
+    console.log(error);
+  }
+
+}
+
+
+
 export default api;
 
 // (https://shrouded-shelf-01513.herokuapp.com/)

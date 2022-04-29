@@ -1,5 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import Tela1 from '../../Telas/Tela1'
 import Tela3 from '../../Telas/Tela3'
 

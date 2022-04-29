@@ -26,8 +26,6 @@ export default function Tela1({ navigation }) {
    },[])
 
 
-   
-
     
     return <>
 
@@ -36,16 +34,16 @@ export default function Tela1({ navigation }) {
             <FlatList
                 contentContainerStyle={{ paddingBottom: 20 }}
                 data={dados}
-                keyExtractor={item => item.id.toString()}
+                keyExtractor={(item,index)=> {item}}
                 renderItem={({ item }) =>
 
                     
-                    <TouchableOpacity onPress={() => {
+                    <TouchableOpacity key={item} onPress={() => {
                             
                             navigation.navigate("Tela3", {...item} )
                         
                     }}>
-                        <Container {...item} />
+                        <Container key={item} {...item} />
                     </TouchableOpacity>}
 
             />
