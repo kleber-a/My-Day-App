@@ -62,7 +62,16 @@ export async function getId(id){
   } catch (error) {
     console.log(error);
   }
+}
 
+export async function getAtividades(){
+  try {
+    const response = api.get("activities/");
+    return response
+    
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 

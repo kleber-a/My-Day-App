@@ -1,11 +1,11 @@
 import React, { Component, useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet, Button, Alert, TouchableOpacity } from 'react-native'
+import { LogBox } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import MyStack from './src/Routes/MyStack';
-import api, { addUser, getUser, getUseractives, deleteUser } from './src/services/api';
-
-import estiloTelaCriacao from './src/Telas/Criacao/estiloCriacao';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+// LogBox.ignoreLogs([
+//   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
+// ]);
+LogBox.ignoreAllLogs();
 
 
 
