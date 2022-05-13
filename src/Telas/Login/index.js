@@ -33,7 +33,7 @@ export default function TelaLogin({navigation}) {
 
             <TextInput
               style={estiloLogin.entrada}
-              placeholder="senha"></TextInput>
+              placeholder="senha" secureTextEntry={true} ></TextInput>
 
             <TouchableOpacity
               style={estiloLogin.botao}
