@@ -6,6 +6,7 @@ import Tela1 from '../../Telas/Tela1'
 import Criacao from '../../Telas/Criacao'
 import Criar from '../../Telas/Criar'
 import Atividades from '../../../src/Telas/Atividades'
+import Login from '../../Telas/Login'
 
 
 Stack = createNativeStackNavigator();
@@ -16,7 +17,7 @@ function MyStack() {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen
         options={{ headerShown: false }}
-        name="Login" component={TelaLogin} />
+        name="Login" component={Login} />
 
       <Stack.Screen
         options={{ headerShown: false }}

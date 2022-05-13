@@ -8,7 +8,7 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 import logo from '../../../assets/image/login.png';
-import estiloLogin from './estilo/estiloLogin';
+import estiloLogin from './estiloLogin';
 
 export default function TelaLogin({navigation}) {
   const entrar = () => {
@@ -20,8 +20,10 @@ export default function TelaLogin({navigation}) {
 
   return (
     <>
-      <KeyboardAvoidingView behavior='padding' style={estiloLogin.keyboard} >
-        <View style={estiloLogin.principal}>
+      <KeyboardAvoidingView 
+      behavior="height"
+      style={estiloLogin.principal}  >
+       
           <View style={estiloLogin.caixainput}>
             <Image source={logo} style={estiloLogin.imagemLogin} />
 
@@ -39,7 +41,7 @@ export default function TelaLogin({navigation}) {
               <Text style={estiloLogin.textobotao}>Entrar</Text>
             </TouchableOpacity>
           </View>
-        </View>
+       
       </KeyboardAvoidingView>
     </>
   );

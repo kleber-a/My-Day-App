@@ -3,9 +3,6 @@ import {StyleSheet} from 'react-native'
 
 const estiloLogin = StyleSheet.create({
 
-    keyboard:{
-        flex:1
-    },
 
     principal: {
         backgroundColor:"#3417F1",
@@ -23,11 +20,9 @@ const estiloLogin = StyleSheet.create({
     },
 
     imagemLogin: {
-        resizeMode: "center",
+        alignSelf:'center',
         width: 228,
-        height: 228,
-        paddingVertical: 100,
-        paddingHorizontal: "50%" 
+        height: 228, 
     },
 
     entrada: {
